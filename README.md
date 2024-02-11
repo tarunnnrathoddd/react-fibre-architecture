@@ -1,12 +1,13 @@
-React Fiber Architecture
-Introduction
+###React Fiber Architecture
+
+##Introduction
 React Fiber is an ongoing reimplementation of React's core algorithm. It is the culmination of over two years of research by the React team.
 
 The goal of React Fiber is to increase its suitability for areas like animation, layout, and gestures. Its headline feature is incremental rendering: the ability to split rendering work into chunks and spread it out over multiple frames.
 
 Other key features include the ability to pause, abort, or reuse work as new updates come in; the ability to assign priority to different types of updates; and new concurrency primitives.
 
-About this document
+##About this document
 Fiber introduces several novel concepts that are difficult to grok solely by looking at code. This document began as a collection of notes I took as I followed along with Fiber's implementation in the React project. As it grew, I realized it may be a helpful resource for others, too.
 
 I'll attempt to use the plainest language possible, and to avoid jargon by explicitly defining key terms. I'll also link heavily to external resources when possible.
@@ -17,13 +18,13 @@ This is also a work in progress. Fiber is an ongoing project that will likely un
 
 My goal is that after reading this document, you will understand Fiber well enough to follow along as it's implemented, and eventually even be able to contribute back to React.
 
-/*Prerequisites*/
+###Prerequisites
 I strongly suggest that you are familiar with the following resources before continuing:
 
-React Components, Elements, and Instances - "Component" is often an overloaded term. A firm grasp of these terms is crucial.(https://legacy.reactjs.org/blog/2015/12/18/react-components-elements-and-instances.html)
-Reconciliation - A high-level description of React's reconciliation algorithm.(https://legacy.reactjs.org/docs/reconciliation.html)
-React Basic Theoretical Concepts - A description of the conceptual model of React without implementation burden. Some of this may not make sense on first reading. That's okay, it will make more sense with time.(https://github.com/reactjs/react-basic)
-React Design Principles - Pay special attention to the section on scheduling. It does a great job of explaining the why of React Fiber.(https://legacy.reactjs.org/docs/design-principles.html)
+###React Components, Elements, and Instances - "Component" is often an overloaded term. A firm grasp of these terms is crucial.(https://legacy.reactjs.org/blog/2015/12/18/react-components-elements-and-instances.html)
+###Reconciliation - A high-level description of React's reconciliation algorithm.(https://legacy.reactjs.org/docs/reconciliation.html)
+###React Basic Theoretical Concepts - A description of the conceptual model of React without implementation burden. Some of this may not make sense on first reading. That's okay, it will make more sense with time.(https://github.com/reactjs/react-basic)
+###React Design Principles - Pay special attention to the section on scheduling. It does a great job of explaining the why of React Fiber.(https://legacy.reactjs.org/docs/design-principles.html)
 
 /*Review*/
 Please check out the prerequisites section if you haven't already.
