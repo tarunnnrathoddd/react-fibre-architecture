@@ -17,10 +17,10 @@ This is also a work in progress. Fiber is an ongoing project that will likely un
 
 My goal is that after reading this document, you will understand Fiber well enough to follow along as it's implemented, and eventually even be able to contribute back to React.
 
-Prerequisites
+/*Prerequisites*/
 I strongly suggest that you are familiar with the following resources before continuing:
 
-React Components, Elements, and Instances - "Component" is often an overloaded term. A firm grasp of these terms is crucial.
+React Components, Elements, and Instances - "Component" is often an overloaded term. A firm grasp of these terms is crucial.(https://legacy.reactjs.org/blog/2015/12/18/react-components-elements-and-instances.html)
 Reconciliation - A high-level description of React's reconciliation algorithm.
 React Basic Theoretical Concepts - A description of the conceptual model of React without implementation burden. Some of this may not make sense on first reading. That's okay, it will make more sense with time.
 React Design Principles - Pay special attention to the section on scheduling. It does a great job of explaining the why of React Fiber.
